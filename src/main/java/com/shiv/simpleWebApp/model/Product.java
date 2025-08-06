@@ -4,6 +4,15 @@ package com.shiv.simpleWebApp.model;
 //@Data //give etters nd setters.
 //@AllArgsConstructor //create  a const for prodserv is feature of lombok.did not wprked so using the getters nd setters
 public class Product {
+    @Override
+    public String toString() {
+        return "Product{" +
+                "prodId=" + prodId +
+                ", prodName='" + prodName + '\'' +
+                ", prodPrice=" + prodPrice +
+                '}';
+    }
+
     //we r using privte properties so shuld use getters&sett nd constructor so to make easy we use the lombok,which will make easy(in pom.xml configure) nd use the @data.
  private int prodId;
     private String prodName;
@@ -46,7 +55,7 @@ public class Product {
         return prodPrice;
     }
 
-    public void setprodPrice(int price) {
+    public void setprodPrice(int  prodPrice) {
         this.prodPrice =prodPrice;
     }
 }
